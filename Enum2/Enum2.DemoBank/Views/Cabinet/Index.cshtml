@@ -1,0 +1,153 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutCabinet.cshtml";
+    ViewBag.Title = "Кабинет клиента | Демо-Банк";
+}
+
+<section id="sc-table" class="section dark">
+    <div class="container">
+        <h3 class="text-center">История операций</h3>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Последние операции</th>
+                    <th><!-- Price --></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lorem <strong>some</strong> text<br>More more more text</td>
+                    <td><strong>25&euro;</strong></td>
+                </tr>
+                <tr>
+                    <td>Lorem <strong>some</strong> text<br>More more more text</td>
+                    <td><strong>19&euro;</strong></td>
+                </tr>
+                <tr>
+                    <td>Lorem <strong>some</strong> text<br>More more more text</td>
+                    <td><strong>10&euro;</strong></td>
+                </tr>
+                <tr>
+                    <td>Lorem <strong>some</strong> text<br>More more more text</td>
+                    <td><strong>90&euro;</strong></td>
+                </tr>
+                <tr>
+                    <td>Lorem <strong>some</strong> text<br>More more more text</td>
+                    <td><strong>120&euro;</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</section>
+@*
+<section id="sc-button" class="section dark text-center">
+    <div class="container">
+        <div class="text-left">
+            <a href="#" class="btn btn-primary">button1</a>
+        </div>
+
+    </div>
+</section>
+*@
+<br>
+
+
+@*
+<section id="sc-table" class="section dark">
+    <div class="container">
+        <h3 class="text-center">Blocked Operations</h3>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Last Operations</th>
+
+                    <th><!-- Price --></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lorem <strong>some</strong> text<br>More more more text</td>
+                    <td><strong>25&euro;</strong></td>
+                </tr>
+                <tr>
+                    <td>Lorem <strong>some</strong> text<br>More more more text</td>
+                    <td><strong>19&euro;</strong></td>
+                </tr>
+                <tr>
+                    <td>Lorem <strong>some</strong> text<br>More more more text</td>
+                    <td><strong>10&euro;</strong></td>
+                </tr>
+                <tr>
+                    <td>Lorem <strong>some</strong> text<br>More more more text</td>
+                    <td><strong>90&euro;</strong></td>
+                </tr>
+                <tr>
+                    <td>Lorem <strong>some</strong> text<br>More more more text</td>
+                    <td><strong>120&euro;</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</section>
+<!--
+<section id="sc-button" class="sectioncntrd dark text-center">
+    <div class="container">
+        <div class="text-left">
+            <a href="#" class="btn btn-primary">button1</a>
+        </div>
+
+    </div>
+</section>
+    -->
+*@
+@*
+<section id="sc-button" class="sectioncntrd dark text-center">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="section modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title<a class="anchorjs-link" href="#myModalLabel"><span class="anchorjs-icon"></span></a></h4>
+                </div>
+                <div class="modal-body">
+                    <h4 id="text-in-a-modal">Text in a modal<a class="anchorjs-link" href="#text-in-a-modal"><span class="anchorjs-icon"></span></a></h4>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+                    <h4 id="popover-in-a-modal">Popover in a modal<a class="anchorjs-link" href="#popover-in-a-modal"><span class="anchorjs-icon"></span></a></h4>
+                    <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+
+                    <h4 id="tooltips-in-a-modal">Tooltips in a modal<a class="anchorjs-link" href="#tooltips-in-a-modal"><span class="anchorjs-icon"></span></a></h4>
+                    <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+                    <hr>
+
+                    <h4 id="overflowing-text-to-show-scroll-behavior">Overflowing text to show scroll behavior<a class="anchorjs-link" href="#overflowing-text-to-show-scroll-behavior"><span class="anchorjs-icon"></span></a></h4>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div>
+    </div>
+    <!-- End Button trigger modal -->
+</section>
+
+*@
+
+
+

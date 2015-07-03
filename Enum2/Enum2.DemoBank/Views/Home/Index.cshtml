@@ -1,0 +1,95 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Демо-Банк";
+}
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+        <form class="form form-register dark" id="registration" method="post" action="@Url.Action("Index", "Cabinet")">
+            <!--div class="form-group">
+            <label for="fullname" class="col-sm-3 col-xs-12 control-label">Full name</label>
+            <div class="col-sm-9 col-xs-12">
+                <input type="text" class="form-control required" name="fullname" id="fullname" placeholder="">
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="website" class="col-sm-3 col-xs-12 control-label">Site address</label>
+                <div class="col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" name="website" id="website" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-3 col-xs-12 control-label">Email address</label>
+                <div class="col-sm-9 col-xs-12">
+                    <input type="email" class="form-control required email" name="email" id="email" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-sm-3 col-xs-12 control-label">Password</label>
+                <div class="col-sm-9 col-xs-12">
+                    <input type="password" class="form-control required" name="password" id="password" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword" class="col-sm-3 col-xs-12 control-label">Password</label>
+                <div class="col-sm-9 col-xs-12">
+                    <input type="password" class="form-control required" name="confirmPassword" id="confirmPassword" placeholder="">
+                </div>
+            </div>            
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="newsletter" value="1"> Some option for checkbox
+                        </label>
+                    </div>
+                </div>
+            </div>-->
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox" class="chb-login" id="login-password" name="loginByPassword" value="password"> Ввести логин и пароль</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox" class="chb-login" id="login-enum" name="loginByPassword" value="enum" checked="checked"> Войти через E-NUM</label>
+                    </div>
+                </div>
+            </div>
+            <button id="btn-login" type="submit" class="btn btn-primary btn-lg btn-block">Войти</button>
+        </form>
+        @*
+        <p class="agree-text">
+            By clicking you agree to our Terms of Service, Privacy Policy & Refund Policy.<br/>
+            I have a referral code I'd like to enter
+        </p>
+        *@
+    </div>
+</div>
+
+@*@Html.Partial("_ModalAlert")*@
+
+@section Scripts
+{
+    <script>
+        var btnLogin = $("#btn-login");
+        $(".chb-login").click(function () {
+            var t = $(this);
+            var ch = t.is(":checked");
+            btnLogin.prop("disabled", !ch);
+            if (ch) $(".chb-login[value!=" + t.attr("value") + "]").prop("checked", false);
+        });
+        btnLogin.click(function(e) {
+            var method = $(".chb-login:checked").val();
+            if (method === "enum") return;
+            
+            e.preventDefault();
+            //$("#modalAlert").modal("show");
+            alert("В этой демонстрации авторизация через логин и пароль не работает.\n Пожалуйста, выберите пункт войти через E-NUM.");
+        });
+    </script>
+}

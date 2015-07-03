@@ -1,0 +1,24 @@
+﻿@using System.Security.Claims
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.BodyId = "register-page";
+}
+
+<header>
+    @Html.Partial("_Nav")
+</header>
+
+<div id="hero" class="static-header light">
+    <div class="text-heading">
+        <h1 class="animated hiding" data-animation="bounceInDown" data-delay="0">Интернет банкинг</h1>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+</div>
+
+
+@section Scripts
+{
+    @RenderSection("Scripts", required: false)
+}

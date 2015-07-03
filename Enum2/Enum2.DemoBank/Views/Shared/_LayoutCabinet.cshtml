@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.BodyId = "shortcodes-page";
+}
+<header>
+    <div class="header-holder">
+        @Html.Partial("_Nav")
+    </div>
+</header>
+
+<div id="body">
+    <section id="sc-heading" class="sectioncntrd text-center">
+        <h3>Кабинет клиента</h3>
+        <h6>Ваш e-mail <span class="highlight">@ViewBag.User.Email</span></h6>
+        <h6>Ваш номер телефона <span class="highlight">@ViewBag.User.Phone</span></h6>
+    </section>
+    @*
+    <section id="sc-paragraph" class="section dark">
+        <div class="container">
+            <div class="text-left">
+                <article>
+                    <h5>Default Paragraph</h5>
+                    <div class="sub-title">Subtitle</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    *@
+
+    @RenderBody()
+
+
+    <div class="gap"></div>
+</div>
+
+<div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div>
+
+
+@section Scripts
+{
+    @RenderSection("Scripts", required: false)
+}

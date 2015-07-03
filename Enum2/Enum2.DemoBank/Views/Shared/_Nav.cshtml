@@ -1,0 +1,45 @@
+﻿@using System.Security.Claims
+
+<nav class="navigation navigation-header">
+    <div class="container">
+        <div class="navigation-brand">
+            <div class="brand-logo">
+                <a href="/" class="logo"></a>
+                <span class="sr-only">Bank demo E-NUM</span>
+            </div>
+            <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" data-target=".navigation-navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navigation-navbar">
+            <ul class="navigation-bar navigation-bar-left">
+                <!--
+                <li class="active"><a href="#index">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <!--
+                <li><a href="#features">Features</a></li>
+                <li><a href="#product">Prices</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#footer">Contacts</a></li>
+                -->
+            </ul>
+            <ul class="navigation-bar navigation-bar-right">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li>@Html.ActionLink("" + ClaimsPrincipal.Current.Claims.First(x => x.Type == "email").Value, "Index", "Cabinet", null, new { @class = "featured" })</li>
+                    <li>@Html.ActionLink("Выход", "Logout", "Account")</li>
+                }
+                else
+                {
+                    @*
+                    <li>@Html.ActionLink("Cabinet", "index", "Cabinet", null, new { @class = "featured" })</li>
+                    <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                    *@
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
