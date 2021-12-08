@@ -14,7 +14,7 @@ namespace Enum2.OwinProvider
             /// Endpoint which is used to redirect users to request Enum access
             /// </summary>
             /// <remarks>
-            /// Defaults to https://auth.enum.ru/OAuth/Authorize
+            /// Defaults to https://auth.e-num.com/OAuth/Authorize
             /// </remarks>
             public string AuthorizationEndpoint { get; set; }
 
@@ -22,7 +22,7 @@ namespace Enum2.OwinProvider
             /// Endpoint which is used to exchange code for access token
             /// </summary>
             /// <remarks>
-            /// Defaults to https://auth.enum.ru/OAuth/Token
+            /// Defaults to https://auth.e-num.com/OAuth/Token
             /// </remarks>
             public string TokenEndpoint { get; set; }
 
@@ -30,12 +30,12 @@ namespace Enum2.OwinProvider
             /// Endpoint which is used to obtain user information after authentication
             /// </summary>
             /// <remarks>
-            /// Defaults to https://auth.enum.ru/api/Me
+            /// Defaults to https://auth.e-num.com/api/Me
             /// </remarks>
             public string UserInfoEndpoint { get; set; }
         }
         
-        private const string BaseUrl = "https://auth.enum.ru";
+        private const string BaseUrl = "https://auth.e-num.com";
         private const string AuthorizationEndPoint = BaseUrl + "/OAuth/Authorize";
         private const string TokenEndpoint = BaseUrl + "/OAuth/Token";
         private const string UserInfoEndpoint = BaseUrl + "/api/Me";
